@@ -1,0 +1,22 @@
+<?php
+
+namespace Database\Factories;
+use App\Models\Brand;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class BrandFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'name'=>$this->faker->randomElement(['Trendyol','Adidas','Nike','Lee Cooper','Zara','Puma','Esprit']),
+            'country'=>$this->faker->randomElement(['Turska','','Njemačka','SAD','Velika Britanija','Španija']),
+        ];
+    }
+}
